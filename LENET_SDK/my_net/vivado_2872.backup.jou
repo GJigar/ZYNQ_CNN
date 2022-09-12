@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Aug  6 22:16:32 2022
+# Process ID: 2872
+# Current directory: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1548 C:\Users\Administrator\Desktop\lenet\LENET_SDK\my_net\my_net.xpr
+# Log file: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+open_bd_design {C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd}

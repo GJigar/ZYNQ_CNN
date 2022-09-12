@@ -1,0 +1,627 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Aug  7 23:36:36 2022
+| Host         : MS-QMGTGLWCUXSR running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 117
++-----------+----------+-------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                       | Violations |
++-----------+----------+-------------------------------------------------------------------+------------+
+| DPIP-1    | Warning  | Input pipelining                                                  | 49         |
+| DPOP-1    | Warning  | PREG Output pipelining                                            | 21         |
+| DPOP-2    | Warning  | MREG Output pipelining                                            | 11         |
+| PDCN-1569 | Warning  | LUT equation term check                                           | 16         |
+| AVAL-4    | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 10         |
+| AVAL-5    | Advisory | enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND   | 9          |
+| REQP-1725 | Advisory | DSP_Abus_sign_bit_alert                                           | 1          |
++-----------+----------+-------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/add_ln19_6_fu_361_p2 input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/add_ln19_6_fu_361_p2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/grp_pool_1_fu_1119/input_r_address00 input design_1_i/my_net_0/inst/grp_pool_1_fu_1119/input_r_address00/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#30 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#31 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#32 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#33 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#34 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#36 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#37 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#38 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#39 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#40 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#41 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#42 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 input design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#43 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#44 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP input design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#45 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#46 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#47 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP input design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#48 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#49 Warning
+Input pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/add_ln19_6_fu_361_p2 output design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/add_ln19_6_fu_361_p2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP output design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#9 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP output design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#10 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_pool_1_fu_1119/input_r_address00 output design_1_i/my_net_0/inst/grp_pool_1_fu_1119/input_r_address00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#11 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#12 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_sp_dsp.i_calculate_Fr/DSP output design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_sp_dsp.i_calculate_Fr/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#13 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_calculate_Xf/dsp.one.dsp48e1_add/DSP output design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_calculate_Xf/dsp.one.dsp48e1_add/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#14 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP output design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#15 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP output design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#16 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP output design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#17 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#18 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#19 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 output design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#20 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP output design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#21 Warning
+PREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/mul_ln19_1_reg_409_reg multiplier stage design_1_i/my_net_0/inst/grp_conv2_fu_1095/mul_ln19_1_reg_409_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/mul_ln19_reg_404_reg multiplier stage design_1_i/my_net_0/inst/grp_conv2_fu_1095/mul_ln19_reg_404_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/grp_pool_1_fu_1119/mul_ln30_1_reg_453_reg multiplier stage design_1_i/my_net_0/inst/grp_pool_1_fu_1119/mul_ln30_1_reg_453_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_sp_dsp.i_calculate_Fr/DSP multiplier stage design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/g_Fr_sp_dsp.i_calculate_Fr/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1 multiplier stage design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.MULT/MULT_GEN_VARIANT.FIX_MULT/MULT/gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[0].use_dsp.use_dsp48e1.iDSP48E1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#3 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#4 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#5 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#6 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#7 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#8 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#9 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#10 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hadd_16ns_cud_U1/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#11 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#12 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hadd_16ns_cud_U17/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#13 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#14 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/my_net_hadd_16ns_cud_U36/my_net_ap_hadd_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#15 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT5 (in design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3)*A4*(~A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#16 Warning
+LUT equation term check  
+Used physical LUT pin 'A2' of cell design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6/LUT6 (in design_1_i/my_net_0/inst/my_net_hsub_16ns_ocq_U37/my_net_ap_hsub_3_full_dsp_16_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY_HP.EXP/NOT_LOW_LATENCY_NORM_DIST.STRUCT_ADD/LSBaddmode1.lut0o6 macro) is not included in the LUT equation: 'O6=(A3*A4*A5*(~A6))+(A3*A4*(~A5))+(A3*(~A4)*A5*A6)+(A3*(~A4)*(~A5)*(~A6))+((~A3)*A4*A5*A6)+((~A3)*A4*(~A5)*(~A6))+((~A3)*(~A4)*(~A5)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+AVAL-4#1 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#2 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#3 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#4 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_calculate_Xf/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#5 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#6 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#7 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#8 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#9 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-4#10 Advisory
+enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#1 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/grp_conv2_1_fu_1107/my_net_hmul_16ns_dEe_U2/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#2 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/grp_conv2_fu_1095/my_net_hmul_16ns_dEe_U18/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#3 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_calculate_Xf/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#4 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#5 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#6 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#7 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_addsub/dsp.one.dsp48e1_add/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#8 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_fexp_32ns_lbW_U33/my_net_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+AVAL-5#9 Advisory
+enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
+design_1_i/my_net_0/inst/my_net_hmul_16ns_dEe_U38/my_net_ap_hmul_2_max_dsp_16_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+Related violations: <none>
+
+REQP-1725#1 Advisory
+DSP_Abus_sign_bit_alert  
+design_1_i/my_net_0/inst/my_net_fadd_32ns_ibs_U30/my_net_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+Related violations: <none>
+
+

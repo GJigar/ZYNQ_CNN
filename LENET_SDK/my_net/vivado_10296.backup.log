@@ -1,0 +1,269 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Aug  6 17:30:44 2022
+# Process ID: 10296
+# Current directory: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1388 C:\Users\Administrator\Desktop\lenet\LENET_SDK\my_net\my_net.xpr
+# Log file: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/design/vivado2019/Vivado/2019.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_my_net_0_0
+
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 837.441 ; gain = 156.426
+open_bd_design {C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:hls:my_net:1.0 - my_net_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_1
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_1
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Successfully read diagram <design_1> from BD file <C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 925.562 ; gain = 64.000
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_intf_nets my_net_0_input_V_PORTA] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets my_net_0_output_r_PORTA] [get_bd_cells my_net_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:my_net:1.0 my_net_0
+endgroup
+set_property location {3 820 90} [get_bd_cells my_net_0]
+connect_bd_intf_net [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA] [get_bd_intf_pins my_net_0/input_r_PORTA]
+connect_bd_intf_net [get_bd_intf_pins my_net_0/output_r_PORTA] [get_bd_intf_pins blk_mem_gen_1/BRAM_PORTA]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins my_net_0/s_axi_CRTL_BUS]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins my_net_0/ap_clk]
+save_bd_design
+Wrote  : <C:\Users\Administrator\Desktop\lenet\LENET_SDK\my_net\my_net.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Slave segment </my_net_0/s_axi_CRTL_BUS/Reg> is not mapped into </processing_system7_0/Data>. Please use Address Editor to either map or exclude it.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_1> to default.
+WARNING: [BD 41-927] Following properties on pin /my_net_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+make_wrapper -files [get_files C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_1> to default.
+CRITICAL WARNING: [BD 41-1356] Slave segment </my_net_0/s_axi_CRTL_BUS/Reg> is not mapped into </processing_system7_0/Data>. Please use Address Editor to either map or exclude it.
+Wrote  : <C:\Users\Administrator\Desktop\lenet\LENET_SDK\my_net\my_net.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files -norecurse C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+generate_target all [get_files  C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_1> to default.
+CRITICAL WARNING: [BD 41-1356] Slave segment </my_net_0/s_axi_CRTL_BUS/Reg> is not mapped into </processing_system7_0/Data>. Please use Address Editor to either map or exclude it.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+WARNING: [IP_Flow 19-519] IP 'design_1_my_net_0_1' detected a language mismatch between 'VHDL Simulation Wrapper' and 'Verilog Simulation' output products. Please check with the IP provider to see if this is expected.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block my_net_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_mmu .
+Exporting to file C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1313.246 ; gain = 100.078
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_blk_mem_gen_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_blk_mem_gen_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_2] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_my_net_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_s00_mmu_0] }
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_processing_system7_0_0_synth_1 design_1_blk_mem_gen_0_0_synth_1 design_1_blk_mem_gen_0_1_synth_1 design_1_axi_bram_ctrl_0_1_synth_1 design_1_axi_bram_ctrl_0_2_synth_1 design_1_xbar_0_synth_1 design_1_rst_ps7_0_100M_0_synth_1 design_1_my_net_0_1_synth_1 design_1_auto_pc_1_synth_1 design_1_auto_pc_0_synth_1 design_1_s00_mmu_0_synth_1}
+[Sat Aug  6 17:33:21 2022] Launched design_1_processing_system7_0_0_synth_1, design_1_blk_mem_gen_0_0_synth_1, design_1_blk_mem_gen_0_1_synth_1, design_1_axi_bram_ctrl_0_1_synth_1, design_1_axi_bram_ctrl_0_2_synth_1, design_1_xbar_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_my_net_0_1_synth_1, design_1_auto_pc_1_synth_1, design_1_auto_pc_0_synth_1, design_1_s00_mmu_0_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_blk_mem_gen_0_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_blk_mem_gen_0_0_synth_1/runme.log
+design_1_blk_mem_gen_0_1_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_blk_mem_gen_0_1_synth_1/runme.log
+design_1_axi_bram_ctrl_0_1_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_axi_bram_ctrl_0_1_synth_1/runme.log
+design_1_axi_bram_ctrl_0_2_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_xbar_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_my_net_0_1_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_my_net_0_1_synth_1/runme.log
+design_1_auto_pc_1_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_s00_mmu_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_s00_mmu_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files -ipstatic_source_dir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Aug  6 19:13:53 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/synth_1/runme.log
+[Sat Aug  6 19:13:53 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/impl_1/runme.log
+file mkdir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk
+file copy -force C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/impl_1/design_1_wrapper.sysdef C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+set_property  ip_repo_paths  {c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip C:/Users/Administrator/Desktop/lenet/LENET/my_net} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET/my_net'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:my_net:1.0'. The one found in IP location 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip' will take precedence over the same IP in location c:/Users/Administrator/Desktop/lenet/LENET/my_net/solution1/impl/ip
+set_property  ip_repo_paths  c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+set_property  ip_repo_paths  {c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip C:/Users/Administrator/Desktop/lenet/HLS_DNN/hls_lenet} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/HLS_DNN/hls_lenet'.
+set_property  ip_repo_paths  c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+set_property  ip_repo_paths  {c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip C:/Users/Administrator/Desktop/lenet/HLS_lenet/hls_lenet} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/HLS_lenet/hls_lenet'.
+set_property  ip_repo_paths  c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Administrator/Desktop/lenet/LENET_SDK/lenet_ip/ip'.
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/my_net_0/s_axi_CRTL_BUS} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins my_net_0/s_axi_CRTL_BUS]
+Slave segment </my_net_0/s_axi_CRTL_BUS/Reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets ps7_0_axi_periph_M02_AXI] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells rst_ps7_0_100M]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_bram_ctrl_0/S_AXI} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_bram_ctrl_1/S_AXI} intc_ip {Auto} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/my_net_0/s_axi_CRTL_BUS} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins my_net_0/s_axi_CRTL_BUS]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_1> to default.
+WARNING: [BD 41-927] Following properties on pin /my_net_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_processing_system7_0_0_FCLK_CLK0 
+validate_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2257.895 ; gain = 0.000
+generate_target all [get_files  C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_1> to default.
+Wrote  : <C:\Users\Administrator\Desktop\lenet\LENET_SDK\my_net\my_net.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_1/addrb'(32) to net 'axi_bram_ctrl_1_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block my_net_0 .
+Exporting to file c:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2257.895 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_1] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_2] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_100M_1, cache-ID = 34bfec66c547985c; cache size = 21.894 MB.
+export_ip_user_files -of_objects [get_files C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 12 {design_1_axi_bram_ctrl_0_1_synth_1 design_1_axi_bram_ctrl_0_2_synth_1 design_1_axi_smc_0_synth_1}
+[Sat Aug  6 21:43:14 2022] Launched design_1_axi_bram_ctrl_0_1_synth_1, design_1_axi_bram_ctrl_0_2_synth_1, design_1_axi_smc_0_synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_1_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_axi_bram_ctrl_0_1_synth_1/runme.log
+design_1_axi_bram_ctrl_0_2_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/design_1_axi_smc_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files -ipstatic_source_dir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/modelsim} {questa=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/questa} {riviera=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/riviera} {activehdl=C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Sat Aug  6 21:48:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Aug  6 21:49:35 2022] Launched impl_1...
+Run output will be captured here: C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/impl_1/runme.log
+file mkdir C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk
+file copy -force C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.runs/impl_1/design_1_wrapper.sysdef C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk -hwspec C:/Users/Administrator/Desktop/lenet/LENET_SDK/my_net/my_net.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  6 22:16:23 2022...

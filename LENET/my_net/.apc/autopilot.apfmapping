@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="my_net.cpp" path="C:\Users\Administrator\Desktop\lenet\LENET\my_net\src\my_net.cpp"/>
+    <originFiles name="my_net.h" path="C:\Users\Administrator\Desktop\lenet\LENET\my_net\src\my_net.h"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="C:\Users\Administrator\Desktop\lenet\LENET\my_net\src\testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

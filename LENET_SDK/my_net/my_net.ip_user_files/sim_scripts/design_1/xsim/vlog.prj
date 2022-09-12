@@ -1,0 +1,90 @@
+verilog xil_defaultlib --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/1ddd/hdl/verilog" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+"../../../bd/design_1/ip/design_1_blk_mem_gen_0_1/sim/design_1_blk_mem_gen_0_1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/conv2.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/conv2_1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/conv2_1_conv1_weibkb.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/conv2_conv2_weight.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_am_addmul_g8j.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_conv1_bias.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_conv1_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_conv2_bias.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_conv2_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_CRTL_BUS_s_axi.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fadd_32ns_ibs.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc1_bias.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc1_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc1_weight1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc1_weight2.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc2_bias.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc2_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc2_weight.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc3_bias.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc3_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fc3_weight.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fdiv_32ns_jbC.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_fexp_32ns_lbW.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_hadd_16ns_cud.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_hcmp_16ns_eOg.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_hmul_16ns_dEe.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_hptosp_16nncg.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_hsub_16ns_ocq.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_input1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_mul_mul_5nfYi.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_output1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_output1_1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_pool1_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_pool2_output.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_sitofp_32nkbM.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net_sptohp_32nmb6.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/pool.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/pool_1.v" \
+"../../../../my_net.srcs/sources_1/bd/design_1/ipshared/190e/hdl/verilog/my_net.v" \
+"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" \
+
+sv xil_defaultlib --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/1ddd/hdl/verilog" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/sim/bd_afc3_arsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/sim/bd_afc3_rsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/sim/bd_afc3_awsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/sim/bd_afc3_wsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_bsw_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/sim/bd_afc3_s00mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/sim/bd_afc3_s00tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/sim/bd_afc3_s00sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_s00a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/sim/bd_afc3_sarn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/sim/bd_afc3_srn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/sim/bd_afc3_sawn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/sim/bd_afc3_swn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/sim/bd_afc3_sbn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/sim/bd_afc3_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/sim/bd_afc3_m00arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_18/sim/bd_afc3_m00rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_19/sim/bd_afc3_m00awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_20/sim/bd_afc3_m00wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_21/sim/bd_afc3_m00bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_22/sim/bd_afc3_m00e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/sim/bd_afc3_m01s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/sim/bd_afc3_m01arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/sim/bd_afc3_m01rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/sim/bd_afc3_m01awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_27/sim/bd_afc3_m01wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_28/sim/bd_afc3_m01bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_29/sim/bd_afc3_m01e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/sim/bd_afc3_m02s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/sim/bd_afc3_m02arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_32/sim/bd_afc3_m02rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/sim/bd_afc3_m02awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/sim/bd_afc3_m02wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/sim/bd_afc3_m02bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/sim/bd_afc3_m02e_0.sv" \
+
+verilog xil_defaultlib --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "../../../../my_net.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/1ddd/hdl/verilog" --include "../../../../my_net.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/sim/design_1_axi_smc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

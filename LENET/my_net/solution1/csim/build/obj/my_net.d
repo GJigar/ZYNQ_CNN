@@ -1,0 +1,29 @@
+obj/my_net.o: ../../../src/my_net.cpp ../../../src/my_net.h \
+ E:/design/vivado2019/Vivado/2019.1/include/hls_half.h \
+ E:/design/vivado2019/Vivado/2019.1/include/hls_fpo.h \
+ E:/design/vivado2019/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h \
+ E:/design/vivado2019/Vivado/2019.1/include/gmp.h \
+ E:/design/vivado2019/Vivado/2019.1/include/mpfr.h \
+ E:/design/vivado2019/Vivado/2019.1/include/gmp.h \
+ E:/design/vivado2019/Vivado/2019.1/include/mpfr.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_decl.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_int.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_common.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_decl.h \
+ E:/design/vivado2019/Vivado/2019.1/include/etc/ap_private.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_int_base.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_int_ref.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_int_special.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_fixed.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_fixed_base.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_fixed_ref.h \
+ E:/design/vivado2019/Vivado/2019.1/include/ap_fixed_special.h \
+ ../../../src/./weight/conv1_weight.dat \
+ ../../../src/./weight/conv2_weight.dat \
+ ../../../src/./weight/conv1_bias.dat \
+ ../../../src/./weight/conv2_bias.dat \
+ ../../../src/./weight/fc1_weight1.dat \
+ ../../../src/./weight/fc1_weight2.dat \
+ ../../../src/./weight/fc2_weight.dat \
+ ../../../src/./weight/fc3_weight.dat ../../../src/./weight/fc1_bias.dat \
+ ../../../src/./weight/fc2_bias.dat ../../../src/./weight/fc3_bias.dat

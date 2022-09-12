@@ -1,0 +1,23 @@
+INFO: [HLS 200-10] Running 'E:/design/vivado2019/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Administrator' on host 'ms-qmgtglwcuxsr' (Windows NT_amd64 version 6.2) on Tue Aug 09 15:35:18 +0800 2022
+INFO: [HLS 200-10] In directory 'C:/Users/Administrator/Desktop/lenet/LENET'
+Sourcing Tcl script 'C:/Users/Administrator/Desktop/lenet/LENET/my_net/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/Administrator/Desktop/lenet/LENET/my_net'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/Administrator/Desktop/lenet/LENET/my_net/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+0.246582
+0.155396
+0.437012
+0.332520
+0.431885
+0.254883
+0.226074
+0.196045
+0.239136
+0.187134
+endINFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

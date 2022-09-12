@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vivado HLS Report for 'pool_1'
+================================================================
+* Date:           Sat Aug  6 17:19:58 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        my_net
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.440|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  4537|  4537|  4537|  4537|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+------+------+----------+-----------+-----------+------+----------+
+        |                     |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1             |  4536|  4536|       324|          -|          -|    14|    no    |
+        | + Loop 1.1          |   322|   322|        23|          -|          -|    14|    no    |
+        |  ++ Loop 1.1.1      |    20|    20|        10|          -|          -|     2|    no    |
+        |   +++ Loop 1.1.1.1  |     8|     8|         4|          -|          -|     2|    no    |
+        +---------------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 
+5 --> 6 3 
+6 --> 7 5 
+7 --> 8 
+8 --> 9 
+9 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.38>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%input_offset_read = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %input_offset)"   --->   Operation 10 'read' 'input_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln30_1 = zext i5 %input_offset_read to i13" [my_net/src/my_net.cpp:30]   --->   Operation 11 'zext' 'zext_ln30_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln30_2 = zext i5 %input_offset_read to i15" [my_net/src/my_net.cpp:30]   --->   Operation 12 'zext' 'zext_ln30_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (6.38ns) (root node of the DSP)   --->   "%mul_ln30 = mul i15 %zext_ln30_2, 784" [my_net/src/my_net.cpp:30]   --->   Operation 13 'mul' 'mul_ln30' <Predicate = true> <Delay = 6.38> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 14 [1/1] (4.35ns)   --->   "%mul_ln30_1 = mul i13 %zext_ln30_1, 196" [my_net/src/my_net.cpp:30]   --->   Operation 14 'mul' 'mul_ln30_1' <Predicate = true> <Delay = 4.35> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.76ns)   --->   "br label %.loopexit3" [my_net/src/my_net.cpp:28]   --->   Operation 15 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.91>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%i_0 = phi i4 [ 0, %0 ], [ %i, %.loopexit3.loopexit ]"   --->   Operation 16 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.30ns)   --->   "%icmp_ln28 = icmp eq i4 %i_0, -2" [my_net/src/my_net.cpp:28]   --->   Operation 18 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (1.73ns)   --->   "%i = add i4 %i_0, 1" [my_net/src/my_net.cpp:28]   --->   Operation 19 'add' 'i' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %3, label %.preheader1.preheader" [my_net/src/my_net.cpp:28]   --->   Operation 20 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shl_ln30_1 = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 %i_0, i5 0)" [my_net/src/my_net.cpp:30]   --->   Operation 21 'bitconcatenate' 'shl_ln30_1' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i9 %shl_ln30_1 to i10" [my_net/src/my_net.cpp:30]   --->   Operation 22 'zext' 'zext_ln30' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%shl_ln30_2 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %i_0, i2 0)" [my_net/src/my_net.cpp:30]   --->   Operation 23 'bitconcatenate' 'shl_ln30_2' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln30_3 = zext i6 %shl_ln30_2 to i10" [my_net/src/my_net.cpp:30]   --->   Operation 24 'zext' 'zext_ln30_3' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.82ns)   --->   "%sub_ln30 = sub i10 %zext_ln30, %zext_ln30_3" [my_net/src/my_net.cpp:30]   --->   Operation 25 'sub' 'sub_ln30' <Predicate = (!icmp_ln28)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%shl_ln30_3 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %i_0, i4 0)" [my_net/src/my_net.cpp:30]   --->   Operation 26 'bitconcatenate' 'shl_ln30_3' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln30_4 = zext i8 %shl_ln30_3 to i9" [my_net/src/my_net.cpp:30]   --->   Operation 27 'zext' 'zext_ln30_4' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%shl_ln30_4 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %i_0, i1 false)" [my_net/src/my_net.cpp:30]   --->   Operation 28 'bitconcatenate' 'shl_ln30_4' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln30_5 = zext i5 %shl_ln30_4 to i9" [my_net/src/my_net.cpp:30]   --->   Operation 29 'zext' 'zext_ln30_5' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (1.91ns)   --->   "%sub_ln30_1 = sub i9 %zext_ln30_4, %zext_ln30_5" [my_net/src/my_net.cpp:30]   --->   Operation 30 'sub' 'sub_ln30_1' <Predicate = (!icmp_ln28)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (1.76ns)   --->   "br label %.preheader1" [my_net/src/my_net.cpp:29]   --->   Operation 31 'br' <Predicate = (!icmp_ln28)> <Delay = 1.76>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "ret void" [my_net/src/my_net.cpp:39]   --->   Operation 32 'ret' <Predicate = (icmp_ln28)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.92>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%j_0 = phi i4 [ 0, %.preheader1.preheader ], [ %j, %.preheader1.loopexit ]"   --->   Operation 33 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln29 = zext i4 %j_0 to i9" [my_net/src/my_net.cpp:29]   --->   Operation 34 'zext' 'zext_ln29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (1.30ns)   --->   "%icmp_ln29 = icmp eq i4 %j_0, -2" [my_net/src/my_net.cpp:29]   --->   Operation 35 'icmp' 'icmp_ln29' <Predicate = true> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 14, i64 14, i64 14)"   --->   Operation 36 'speclooptripcount' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (1.73ns)   --->   "%j = add i4 %j_0, 1" [my_net/src/my_net.cpp:29]   --->   Operation 37 'add' 'j' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %icmp_ln29, label %.loopexit3.loopexit, label %1" [my_net/src/my_net.cpp:29]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln30_6 = zext i4 %j_0 to i10" [my_net/src/my_net.cpp:30]   --->   Operation 39 'zext' 'zext_ln30_6' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (1.73ns)   --->   "%add_ln30_1 = add i10 %sub_ln30, %zext_ln30_6" [my_net/src/my_net.cpp:30]   --->   Operation 40 'add' 'add_ln30_1' <Predicate = (!icmp_ln29)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_3 = call i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10 %add_ln30_1, i1 false)" [my_net/src/my_net.cpp:30]   --->   Operation 41 'bitconcatenate' 'tmp_3' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%sext_ln30 = sext i11 %tmp_3 to i15" [my_net/src/my_net.cpp:30]   --->   Operation 42 'sext' 'sext_ln30' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (1.94ns)   --->   "%add_ln30_2 = add i15 %sext_ln30, %mul_ln30" [my_net/src/my_net.cpp:30]   --->   Operation 43 'add' 'add_ln30_2' <Predicate = (!icmp_ln29)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%sext_ln30_1 = sext i15 %add_ln30_2 to i64" [my_net/src/my_net.cpp:30]   --->   Operation 44 'sext' 'sext_ln30_1' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [12544 x half]* %input_r, i64 0, i64 %sext_ln30_1" [my_net/src/my_net.cpp:30]   --->   Operation 45 'getelementptr' 'input_addr' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 46 [2/2] (3.25ns)   --->   "%input_load = load half* %input_addr, align 2" [my_net/src/my_net.cpp:30]   --->   Operation 46 'load' 'input_load' <Predicate = (!icmp_ln29)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_3 : Operation 47 [1/1] (1.82ns)   --->   "%add_ln30 = add i9 %zext_ln29, %sub_ln30_1" [my_net/src/my_net.cpp:30]   --->   Operation 47 'add' 'add_ln30' <Predicate = (!icmp_ln29)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%sext_ln30_2 = sext i9 %add_ln30 to i13" [my_net/src/my_net.cpp:30]   --->   Operation 48 'sext' 'sext_ln30_2' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (1.67ns)   --->   "%add_ln30_3 = add i13 %sext_ln30_2, %mul_ln30_1" [my_net/src/my_net.cpp:30]   --->   Operation 49 'add' 'add_ln30_3' <Predicate = (!icmp_ln29)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%sext_ln30_3 = sext i13 %add_ln30_3 to i64" [my_net/src/my_net.cpp:30]   --->   Operation 50 'sext' 'sext_ln30_3' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [3136 x half]* %output_r, i64 0, i64 %sext_ln30_3" [my_net/src/my_net.cpp:30]   --->   Operation 51 'getelementptr' 'output_addr' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "br label %.loopexit3"   --->   Operation 52 'br' <Predicate = (icmp_ln29)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 6.50>
+ST_4 : Operation 53 [1/2] (3.25ns)   --->   "%input_load = load half* %input_addr, align 2" [my_net/src/my_net.cpp:30]   --->   Operation 53 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_4 : Operation 54 [1/1] (3.25ns)   --->   "store half %input_load, half* %output_addr, align 2" [my_net/src/my_net.cpp:30]   --->   Operation 54 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%shl_ln = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %j_0, i1 false)" [my_net/src/my_net.cpp:33]   --->   Operation 55 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln33 = zext i5 %shl_ln to i11" [my_net/src/my_net.cpp:33]   --->   Operation 56 'zext' 'zext_ln33' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (1.76ns)   --->   "br label %.loopexit" [my_net/src/my_net.cpp:31]   --->   Operation 57 'br' <Predicate = true> <Delay = 1.76>
+
+State 5 <SV = 4> <Delay = 3.51>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%empty_6 = phi half [ %input_load, %1 ], [ %empty_8, %.loopexit.loopexit ]" [my_net/src/my_net.cpp:30]   --->   Operation 58 'phi' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%k_0 = phi i2 [ 0, %1 ], [ %k, %.loopexit.loopexit ]"   --->   Operation 59 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i2 %k_0 to i5" [my_net/src/my_net.cpp:31]   --->   Operation 60 'zext' 'zext_ln31' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (0.95ns)   --->   "%icmp_ln31 = icmp eq i2 %k_0, -2" [my_net/src/my_net.cpp:31]   --->   Operation 61 'icmp' 'icmp_ln31' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 62 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (1.56ns)   --->   "%k = add i2 %k_0, 1" [my_net/src/my_net.cpp:31]   --->   Operation 63 'add' 'k' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "br i1 %icmp_ln31, label %.preheader1.loopexit, label %.preheader.preheader" [my_net/src/my_net.cpp:31]   --->   Operation 64 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (1.78ns)   --->   "%add_ln33 = add i5 %zext_ln31, %shl_ln30_4" [my_net/src/my_net.cpp:33]   --->   Operation 65 'add' 'add_ln33' <Predicate = (!icmp_ln31)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%shl_ln33_1 = call i10 @_ssdm_op_BitConcatenate.i10.i5.i5(i5 %add_ln33, i5 0)" [my_net/src/my_net.cpp:33]   --->   Operation 66 'bitconcatenate' 'shl_ln33_1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%zext_ln33_1 = zext i10 %shl_ln33_1 to i11" [my_net/src/my_net.cpp:33]   --->   Operation 67 'zext' 'zext_ln33_1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%shl_ln33_2 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %add_ln33, i2 0)" [my_net/src/my_net.cpp:33]   --->   Operation 68 'bitconcatenate' 'shl_ln33_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln33_2 = zext i7 %shl_ln33_2 to i11" [my_net/src/my_net.cpp:33]   --->   Operation 69 'zext' 'zext_ln33_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_5 : Operation 70 [1/1] (1.73ns)   --->   "%sub_ln33 = sub i11 %zext_ln33_1, %zext_ln33_2" [my_net/src/my_net.cpp:33]   --->   Operation 70 'sub' 'sub_ln33' <Predicate = (!icmp_ln31)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 71 [1/1] (1.76ns)   --->   "br label %.preheader" [my_net/src/my_net.cpp:32]   --->   Operation 71 'br' <Predicate = (!icmp_ln31)> <Delay = 1.76>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "br label %.preheader1"   --->   Operation 72 'br' <Predicate = (icmp_ln31)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 6.83>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%empty_8 = phi half [ %select_ln33, %2 ], [ %empty_6, %.preheader.preheader ]" [my_net/src/my_net.cpp:33]   --->   Operation 73 'phi' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%m_0 = phi i2 [ %m, %2 ], [ 0, %.preheader.preheader ]"   --->   Operation 74 'phi' 'm_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.95ns)   --->   "%icmp_ln32 = icmp eq i2 %m_0, -2" [my_net/src/my_net.cpp:32]   --->   Operation 75 'icmp' 'icmp_ln32' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 76 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (1.56ns)   --->   "%m = add i2 %m_0, 1" [my_net/src/my_net.cpp:32]   --->   Operation 77 'add' 'm' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "br i1 %icmp_ln32, label %.loopexit.loopexit, label %2" [my_net/src/my_net.cpp:32]   --->   Operation 78 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_2 = call i9 @_ssdm_op_PartSelect.i9.i11.i32.i32(i11 %sub_ln33, i32 2, i32 10)" [my_net/src/my_net.cpp:33]   --->   Operation 79 'partselect' 'tmp_2' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "%tmp = call i11 @_ssdm_op_BitConcatenate.i11.i9.i2(i9 %tmp_2, i2 %m_0)" [my_net/src/my_net.cpp:33]   --->   Operation 80 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (1.63ns)   --->   "%add_ln33_1 = add i11 %zext_ln33, %tmp" [my_net/src/my_net.cpp:33]   --->   Operation 81 'add' 'add_ln33_1' <Predicate = (!icmp_ln32)> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%sext_ln33 = sext i11 %add_ln33_1 to i15" [my_net/src/my_net.cpp:33]   --->   Operation 82 'sext' 'sext_ln33' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (1.94ns)   --->   "%add_ln33_2 = add i15 %sext_ln33, %mul_ln30" [my_net/src/my_net.cpp:33]   --->   Operation 83 'add' 'add_ln33_2' <Predicate = (!icmp_ln32)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%sext_ln33_1 = sext i15 %add_ln33_2 to i64" [my_net/src/my_net.cpp:33]   --->   Operation 84 'sext' 'sext_ln33_1' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%input_addr_1 = getelementptr [12544 x half]* %input_r, i64 0, i64 %sext_ln33_1" [my_net/src/my_net.cpp:33]   --->   Operation 85 'getelementptr' 'input_addr_1' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_6 : Operation 86 [2/2] (3.25ns)   --->   "%input_load_1 = load half* %input_addr_1, align 2" [my_net/src/my_net.cpp:33]   --->   Operation 86 'load' 'input_load_1' <Predicate = (!icmp_ln32)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 87 'br' <Predicate = (icmp_ln32)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 8.44>
+ST_7 : Operation 88 [1/2] (3.25ns)   --->   "%input_load_1 = load half* %input_addr_1, align 2" [my_net/src/my_net.cpp:33]   --->   Operation 88 'load' 'input_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_7 : Operation 89 [2/2] (5.18ns)   --->   "%tmp_1 = fcmp olt half %empty_8, %input_load_1" [my_net/src/my_net.cpp:33]   --->   Operation 89 'hcmp' 'tmp_1' <Predicate = true> <Delay = 5.18> <Core = "HCmp">   --->   Core 98 'HCmp' <Latency = 1> <II = 1> <Delay = 5.18> <FuncUnit> <Opcode : 'hcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.99>
+ST_8 : Operation 90 [1/2] (5.18ns)   --->   "%tmp_1 = fcmp olt half %empty_8, %input_load_1" [my_net/src/my_net.cpp:33]   --->   Operation 90 'hcmp' 'tmp_1' <Predicate = true> <Delay = 5.18> <Core = "HCmp">   --->   Core 98 'HCmp' <Latency = 1> <II = 1> <Delay = 5.18> <FuncUnit> <Opcode : 'hcmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 91 [1/1] (0.80ns)   --->   "%select_ln33 = select i1 %tmp_1, half %input_load_1, half %empty_8" [my_net/src/my_net.cpp:33]   --->   Operation 91 'select' 'select_ln33' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 92 [1/1] (3.25ns)   --->   "store half %select_ln33, half* %output_addr, align 2" [my_net/src/my_net.cpp:33]   --->   Operation 92 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3136> <RAM>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "br label %.preheader" [my_net/src/my_net.cpp:32]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.38ns
+The critical path consists of the following:
+	wire read on port 'input_offset' [4]  (0 ns)
+	'mul' operation of DSP[7] ('mul_ln30', my_net/src/my_net.cpp:30) [7]  (6.38 ns)
+
+ <State 2>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', my_net/src/my_net.cpp:28) [11]  (0 ns)
+	'sub' operation ('sub_ln30_1', my_net/src/my_net.cpp:30) [26]  (1.92 ns)
+
+ <State 3>: 6.93ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', my_net/src/my_net.cpp:29) [29]  (0 ns)
+	'add' operation ('add_ln30_1', my_net/src/my_net.cpp:30) [37]  (1.73 ns)
+	'add' operation ('add_ln30_2', my_net/src/my_net.cpp:30) [40]  (1.94 ns)
+	'getelementptr' operation ('input_addr', my_net/src/my_net.cpp:30) [42]  (0 ns)
+	'load' operation ('input_load', my_net/src/my_net.cpp:30) on array 'input_r' [43]  (3.25 ns)
+
+ <State 4>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('input_load', my_net/src/my_net.cpp:30) on array 'input_r' [43]  (3.25 ns)
+	'store' operation ('store_ln30', my_net/src/my_net.cpp:30) of variable 'input_load', my_net/src/my_net.cpp:30 on array 'output_r' [49]  (3.25 ns)
+
+ <State 5>: 3.51ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', my_net/src/my_net.cpp:31) [55]  (0 ns)
+	'add' operation ('add_ln33', my_net/src/my_net.cpp:33) [62]  (1.78 ns)
+	'sub' operation ('sub_ln33', my_net/src/my_net.cpp:33) [67]  (1.73 ns)
+
+ <State 6>: 6.84ns
+The critical path consists of the following:
+	'phi' operation ('m') with incoming values : ('m', my_net/src/my_net.cpp:32) [71]  (0 ns)
+	'add' operation ('add_ln33_1', my_net/src/my_net.cpp:33) [79]  (1.64 ns)
+	'add' operation ('add_ln33_2', my_net/src/my_net.cpp:33) [81]  (1.94 ns)
+	'getelementptr' operation ('input_addr_1', my_net/src/my_net.cpp:33) [83]  (0 ns)
+	'load' operation ('input_load_1', my_net/src/my_net.cpp:33) on array 'input_r' [84]  (3.25 ns)
+
+ <State 7>: 8.44ns
+The critical path consists of the following:
+	'load' operation ('input_load_1', my_net/src/my_net.cpp:33) on array 'input_r' [84]  (3.25 ns)
+	'hcmp' operation ('tmp_1', my_net/src/my_net.cpp:33) [85]  (5.19 ns)
+
+ <State 8>: 5.99ns
+The critical path consists of the following:
+	'hcmp' operation ('tmp_1', my_net/src/my_net.cpp:33) [85]  (5.19 ns)
+	'select' operation ('select_ln33', my_net/src/my_net.cpp:33) [86]  (0.805 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln33', my_net/src/my_net.cpp:33) of variable 'select_ln33', my_net/src/my_net.cpp:33 on array 'output_r' [87]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
